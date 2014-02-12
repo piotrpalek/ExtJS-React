@@ -1,3 +1,4 @@
+(function(){
 var orgGetPath = Ext.Loader.getPath,
     orgloadScriptFile = Ext.Loader.loadScriptFile;
 
@@ -21,8 +22,7 @@ Ext.Loader.loadScriptFile = function (url, onLoad, onError, scope, synchronous) 
 
   Ext.Loader.isLoading = true;
 
-  if(scope.LAST_CLASS_NAME.indexOf('react') !== -1 || scope.LAST_CLASS_NAME.indexOf('Keypm.modules') !== -1){
-      //className = className.substr(4);
+  if(scope.LAST_CLASS_NAME.indexOf('react') !== -1){
       var transformer = JSXTransformer;
       try {
           transformer.load(noCacheUrl, function () {onLoad.call(scope); });
@@ -34,4 +34,5 @@ Ext.Loader.loadScriptFile = function (url, onLoad, onError, scope, synchronous) 
   else {
     orgloadScriptFile.call(this, url, onLoad, onError, scope, synchronous);
   }
-};
+};  
+})()
