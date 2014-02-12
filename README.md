@@ -1,4 +1,8 @@
-ExtJSX
+Cmp.js
+======
+Contains a simple React.js component for ExtJS.
+
+ExtJSX.js
 ======
 JSX Transformer support for ExtJS - a simple modification to the ExtJS class loader.
 
