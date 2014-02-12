@@ -11,5 +11,5 @@ If a part of the classname matches i load the script via JSXTransformer.load, if
 How to use
 ==========
 
-Include JSXtransformer.js before extjsx.jsx.
+Include JSXtransformer.js before extjsx.js.
 Extjsx.js should be included after ExtJS.
